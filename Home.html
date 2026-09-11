@@ -28,7 +28,7 @@
       width: 297mm;
       height: 210mm;
       position: relative;
-      padding: 10mm;
+      padding: 8mm 10mm 6mm 10mm;
       background-color: #FFFFFF;
       margin: 0 auto 10mm auto;
       page-break-after: always;
@@ -44,66 +44,99 @@
       .page-sheet { margin: 0; }
     }
 
-    /* Master Top Header (Solo Página 1) */
-    .master-header {
-      border-bottom: 2px solid #0F2C59;
-      padding-bottom: 2mm;
+    /* =========================================================
+       ENCABEZADO MAESTRO IDÉNTICO A LA IMAGEN (PÁGINA 1)
+       ========================================================= */
+    .master-header-container {
+      width: 277mm;
       margin-bottom: 2mm;
     }
-    .master-brand-row {
+
+    .master-header-top {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand-name {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      color: #0F2C59;
-      text-transform: uppercase;
-    }
-    .brand-coverage {
-      font-size: 8px;
-      font-weight: 600;
-      color: #64748B;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    .master-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: #0F172A;
-      letter-spacing: -0.2px;
-      margin-top: 0.5mm;
-    }
-    .master-desc {
-      font-size: 7.2px;
-      color: #475569;
-      line-height: 1.25;
-      margin-top: 1mm;
+      align-items: flex-start;
+      border-bottom: 1.2px solid #CBD5E1;
+      padding-bottom: 1.5mm;
+      margin-bottom: 1.8mm;
     }
 
-    /* Section Banner (Páginas 2 a 14) */
+    .brand-col-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: #1E293B;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0284C7;
+      margin-top: 0.6mm;
+      text-transform: uppercase;
+    }
+
+    .brand-col-right {
+      text-align: right;
+      font-size: 8.5px;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    .brand-col-right strong {
+      color: #1E293B;
+    }
+
+    /* Recuadro de resumen con cintillo azul a la izquierda */
+    .overview-callout {
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 3.5px solid #0284C7;
+      padding: 1.6mm 2.8mm;
+      border-radius: 2px;
+      margin-bottom: 2mm;
+    }
+
+    .overview-callout p {
+      font-size: 7.6px;
+      line-height: 1.35;
+      color: #334155;
+    }
+
+    .overview-callout strong {
+      color: #0F172A;
+    }
+
+    /* Section Ribbon (Páginas 2 a 14) */
     .section-ribbon {
       background-color: #0F2C59;
       color: #FFFFFF;
-      padding: 1.5mm 3mm;
+      padding: 1.4mm 3mm;
       font-size: 7.5px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       border-radius: 2px;
       margin-bottom: 2mm;
     }
 
-    /* Contenedores de Activo */
+    /* Contenedores de Imagen */
     .hero-container-page1 {
       width: 277mm;
-      height: 116mm;
+      height: 111mm;
       overflow: hidden;
       border-radius: 3px;
       background-color: #0F172A;
     }
+
     .hero-container-standard {
       width: 277mm;
       height: 124.65mm;
@@ -111,6 +144,7 @@
       border-radius: 3px;
       background-color: #0F172A;
     }
+
     .hero-container-compact {
       width: 277mm;
       height: 28mm;
@@ -118,13 +152,13 @@
       border-radius: 3px;
       background-color: #0F172A;
     }
+
     .hero-placeholder-box {
       width: 100%;
       height: 100%;
       background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
       color: #94A3B8;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-size: 8px;
@@ -133,6 +167,7 @@
       text-transform: uppercase;
       border: 1px dashed #475569;
     }
+
     .hero-image {
       width: 100%;
       height: 100%;
@@ -145,6 +180,7 @@
       width: 277mm;
       margin-top: 2mm;
     }
+
     .header-bar {
       display: flex;
       justify-content: space-between;
@@ -153,17 +189,20 @@
       padding-bottom: 1.5mm;
       margin-bottom: 1.8mm;
     }
+
     .title-group {
       display: flex;
       flex-direction: column;
       gap: 0.5mm;
     }
+
     .asset-title {
       font-size: 13px;
       font-weight: 700;
       color: #0F172A;
       line-height: 1.1;
     }
+
     .asset-subtitle {
       font-size: 8.5px;
       font-weight: 600;
@@ -171,23 +210,27 @@
       letter-spacing: 0.3px;
       text-transform: uppercase;
     }
+
     .price-value {
       font-size: 17.5px;
       font-weight: 800;
       color: #0F2C59;
       line-height: 1;
     }
+
     .metrics-table {
       width: 100%;
       border-collapse: collapse;
       table-layout: fixed;
     }
+
     .metrics-table th, .metrics-table td {
       border: 1px solid #E2E8F0;
       padding: 1.4mm 1.8mm;
       vertical-align: top;
       text-align: left;
     }
+
     .metrics-table th {
       background-color: #F8FAFC;
       color: #475569;
@@ -197,11 +240,13 @@
       text-transform: uppercase;
       border-bottom: 1.2px solid #CBD5E1;
     }
+
     .metrics-table td {
       font-size: 8px;
       line-height: 1.2;
       color: #1E293B;
     }
+
     .cell-bold { font-weight: 700; color: #0F2C59; }
     .cell-muted { color: #64748B; font-size: 7.5px; }
     .col-concept { width: 22%; }
@@ -227,9 +272,9 @@
       padding-top: 1.2mm;
     }
 
-    /* Página 14 Especial: 2 Activos + Tabla Resumen */
+    /* Página 14 Resumen */
     .summary-box {
-      margin-top: 2.5mm;
+      margin-top: 2mm;
       border: 1.5px solid #0F2C59;
       border-radius: 3px;
       overflow: hidden;
@@ -271,14 +316,21 @@
   <!-- ==================== PÁGINA 1 ==================== -->
   <div class="page-sheet">
     <div>
-      <header class="master-header">
-        <div class="master-brand-row">
-          <span class="brand-name">Royal Coast Properties</span>
-          <span class="brand-coverage">Coverage: Complete 27-Asset Inventory | Order: Descending Asking Price (USD)</span>
+      <div class="master-header-container">
+        <div class="master-header-top">
+          <div class="brand-col-left">
+            <h1 class="brand-title">ROYAL COAST PROPERTIES</h1>
+            <span class="brand-subtitle">EXECUTIVE HOTEL &amp; RESORT MASTER PORTFOLIO 2026</span>
+          </div>
+          <div class="brand-col-right">
+            <div><strong>Coverage:</strong> Complete 27-Asset Inventory</div>
+            <div><strong>Order:</strong> Descending Asking Price (USD)</div>
+          </div>
         </div>
-        <h1 class="master-title">EXECUTIVE HOTEL &amp; RESORT MASTER PORTFOLIO 2026</h1>
-        <p class="master-desc">Consolidated underwriting schedule of all 27 hospitality assets across Caribbean, Pacific, Baja Peninsula, and key Mexican metropolitan centers. Sequenced strictly in descending order of asking price ($600.0M to $3.4M USD).</p>
-      </header>
+        <div class="overview-callout">
+          <p><strong>Master Inventory Overview:</strong> Consolidated underwriting schedule of all 27 hospitality assets across Caribbean, Pacific, Baja Peninsula, and key Mexican metropolitan centers. Sequenced strictly in descending order of asking price ($600.0M to $3.4M USD).</p>
+        </div>
+      </div>
 
       <div class="hero-container-page1">
         <img src="src/1.gpt-image-2.5-sunburst_a_Actúa_como_un_diseña (1).png" alt="Asset Ref #1" class="hero-image">
@@ -1176,7 +1228,7 @@
         </table>
       </div>
 
-      <!-- Resumen Consolidado Original -->
+      <!-- Resumen Consolidado -->
       <div class="summary-box">
         <div class="summary-header">Consolidated Portfolio Distribution Summary</div>
         <table class="summary-table">
